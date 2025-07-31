@@ -12,17 +12,13 @@ func _process(delta: float) -> void:
 
 
 func _on_PlayButton_pressed():
-	# Replace with your code to load Level Select or first gameplay scene
-	print("Play pressed")
-
+	get_tree().change_scene("res://Scenes/ui/level_select.tscn")
 
 func _on_ShopButton_pressed():
-	print("Shop pressed")
-
+	get_tree().change_scene("res://Scenes/Shop/shop_screen.tscn")
 
 func _on_InfoButton_pressed():
-	print("Info pressed")
-
+	get_tree().change_scene("res://Scenes/Info/info_page.tscn")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()

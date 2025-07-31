@@ -13,11 +13,11 @@ config_version=5
 config/name="berry bounce"
 run/main_scene="uid://bq5du574re4kw"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/images/icon.svg"
 
 [autoload]
 
-SaveSystem="*res://SaveSystem.gd"
+SaveSystem="*res://Scripts/SaveSystem.gd"
 
 [editor_plugins]
 

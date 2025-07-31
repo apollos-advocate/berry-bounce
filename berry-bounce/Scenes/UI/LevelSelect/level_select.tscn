@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dn30j6rrwm4m3"]
+[gd_scene load_steps=2 format=3 uid="uid://dn30j6rrwm4m3"]
+
+[ext_resource type="Script" uid="uid://bo3s517okrfrn" path="res://Scripts/level_select.gd" id="1_gaxvt"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -11,6 +13,7 @@ offset_right = -71.0
 offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gaxvt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -22,10 +25,10 @@ text = "Level Select"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 195.0
-offset_right = 533.0
-offset_bottom = 235.0
+offset_left = 463.0
+offset_top = 197.0
+offset_right = 655.0
+offset_bottom = 403.0
 
 [node name="Level1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -46,3 +49,11 @@ text = "Level 4: Green Apple "
 [node name="Level5" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Level 5: Blueberry Burst"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 467.0
+offset_top = 402.0
+offset_right = 659.0
+offset_bottom = 433.0
+text = "GO BACK"

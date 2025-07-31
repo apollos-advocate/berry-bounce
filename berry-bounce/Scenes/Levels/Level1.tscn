@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=4 uid="uid://bq5du574re4kw"]
 
-[ext_resource type="Texture2D" uid="uid://bbbdw4darmi3j" path="res://icon.svg" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://dby37lkvhf151" path="res://player.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://jn7q2u2f23mf" path="res://green.png" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://b5ya1vvjqjqrd" path="res://goal.gd" id="4_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bqr0l430lynxc" path="res://images/icon.jpg" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bbbdw4darmi3j" path="res://Assets/images/icon.svg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dby37lkvhf151" path="res://Scripts/player.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://jn7q2u2f23mf" path="res://Assets/images/green.png" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b5ya1vvjqjqrd" path="res://Scripts/goal.gd" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bqr0l430lynxc" path="res://Assets/images/icon.jpg" id="5_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(48.9304, 86.1157)
