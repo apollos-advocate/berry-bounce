@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://tev0aa4n766t"]
+
+[node name="Charchoose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.009
+offset_left = 4.0
+offset_right = 177.632
+offset_bottom = 31.0
+text = "PICK YOUR CHARACTER!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Label"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 346.0
+offset_bottom = 304.0
+
+[node name="Button" type="Button" parent="Label/VBoxContainer"]
+layout_mode = 2
+text = "STRAWBERRY"
+
+[node name="Button2" type="Button" parent="Label/VBoxContainer"]
+layout_mode = 2
+text = "RASPBERRY"
+
+[node name="Button3" type="Button" parent="Label/VBoxContainer"]
+layout_mode = 2
+text = "BLACKBERRY"
+
+[node name="Button4" type="Button" parent="Label/VBoxContainer"]
+layout_mode = 2
+text = "BLUEBERRY"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 176.0
+offset_right = 44.0
+offset_bottom = 199.0
+text = "You can change later in the shop"
