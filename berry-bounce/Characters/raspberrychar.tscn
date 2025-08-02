@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20xbcop8dhqq"]
+
+[ext_resource type="Texture2D" uid="uid://d3tor0r1f88hw" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/red raspberry.png" id="1_p2a5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d33oh"]
+size = Vector2(251, 286)
+
+[node name="Raspberrychar" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 135.75)
+scale = Vector2(14.8571, 16.3214)
+texture = ExtResource("1_p2a5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(135.5, 133)
+shape = SubResource("RectangleShape2D_d33oh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0

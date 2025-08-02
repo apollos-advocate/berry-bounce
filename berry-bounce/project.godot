@@ -17,7 +17,7 @@ config/icon="res://Assets/images/icon.svg"
 
 [autoload]
 
-SaveSystem="*res://Scripts/SaveSystem.gd"
+Global="*res://Scripts/Global.gd"
 
 [editor_plugins]
 

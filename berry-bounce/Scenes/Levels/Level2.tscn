@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://yw5bwllvu31r"]
+[gd_scene load_steps=7 format=4 uid="uid://yw5bwllvu31r"]
 
-[ext_resource type="Texture2D" uid="uid://jn7q2u2f23mf" path="res://Assets/images/green.png" id="1_m40gi"]
-[ext_resource type="PackedScene" uid="uid://h04ctqekxeae" path="res://Assets/Player/player.tscn" id="2_svn12"]
-[ext_resource type="PackedScene" uid="uid://6mn0bojp8qsh" path="res://Scenes/goal.tscn" id="3_svn12"]
+[ext_resource type="Texture2D" uid="uid://doqys5xkgsr65" path="res://Assets/images/Screenshot 2025-08-02 141219.png" id="2_smuj1"]
+[ext_resource type="PackedScene" uid="uid://h04ctqekxeae" path="res://Characters/player.tscn" id="2_svn12"]
+[ext_resource type="PackedScene" uid="uid://6mn0bojp8qsh" path="res://Scenes/UI/goal.tscn" id="3_svn12"]
+[ext_resource type="Texture2D" uid="uid://cxerqhs5vwgkp" path="res://Assets/images/Screenshot 2025-08-02 140842.png" id="4_5iseo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svn12"]
-texture = ExtResource("1_m40gi")
+texture = ExtResource("2_smuj1")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -202,3 +203,18 @@ tile_set = SubResource("TileSet_svn12")
 
 [node name="Goal" parent="." instance=ExtResource("3_svn12")]
 position = Vector2(365, -420)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_repeat = 2
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(0.5, 1)
+motion_mirroring = Vector2(0.5, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -1842.0
+offset_top = -1520.0
+offset_right = 1999.0
+offset_bottom = 1302.0
+texture = ExtResource("4_5iseo")

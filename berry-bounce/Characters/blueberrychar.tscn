@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://blv3vr80ym3jy"]
+
+[ext_resource type="Texture2D" uid="uid://b648prtub1y6p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/blueberry/blueberry.png" id="1_ofk3r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68drk"]
+size = Vector2(274, 276)
+
+[node name="Blueberrychar" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(143, 131)
+scale = Vector2(13.625, 12.4333)
+texture = ExtResource("1_ofk3r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(150, 147)
+shape = SubResource("RectangleShape2D_68drk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0

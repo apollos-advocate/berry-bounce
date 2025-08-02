@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cwgdbmsahltdr" path="res://Assets/images/Screenshot 2025-08-01 155333.png" id="1_riv1q"]
 [ext_resource type="Texture2D" uid="uid://dfacm32lelypj" path="res://Assets/images/Screenshot 2025-08-01 154034.png" id="1_xvio3"]
-[ext_resource type="PackedScene" uid="uid://6mn0bojp8qsh" path="res://Scenes/goal.tscn" id="2_riv1q"]
+[ext_resource type="PackedScene" uid="uid://6mn0bojp8qsh" path="res://Scenes/UI/goal.tscn" id="2_riv1q"]
 [ext_resource type="PackedScene" uid="uid://cxfxq2amsujpl" path="res://Scenes/Levels/collectberry.tscn" id="4_kri6y"]
-[ext_resource type="PackedScene" uid="uid://h04ctqekxeae" path="res://Assets/Player/player.tscn" id="4_xvio3"]
+[ext_resource type="PackedScene" uid="uid://h04ctqekxeae" path="res://Characters/player.tscn" id="4_xvio3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riv1q"]
 texture = ExtResource("1_riv1q")
@@ -215,7 +215,7 @@ tile_map_data = PackedByteArray("AAAIABAAAAAAAAAAAAAIAA8AAAAAAAAAAAAHAA8AAAAAAAA
 tile_set = SubResource("TileSet_7mycd")
 
 [node name="Goal" parent="." instance=ExtResource("2_riv1q")]
-position = Vector2(9, -39)
+position = Vector2(-137, -210)
 
 [node name="Collectberry2" parent="." instance=ExtResource("4_kri6y")]
 position = Vector2(-363, 405)

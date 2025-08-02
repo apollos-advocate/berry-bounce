@@ -13,8 +13,8 @@ script = ExtResource("1_onrkg")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-509, 398)
-scale = Vector2(0.171875, 0.335938)
+position = Vector2(-508, 398)
+scale = Vector2(0.1875, 0.335938)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

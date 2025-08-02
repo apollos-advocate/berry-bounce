@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxfxq2amsujpl"]
 
 [ext_resource type="Texture2D" uid="uid://dis01lnjahv0g" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/white berry.png" id="1_e0f7l"]
-[ext_resource type="Script" uid="uid://bjqlrrgtaq8ce" path="res://Scenes/collectberry.gd" id="1_ncnj0"]
+[ext_resource type="Script" uid="uid://dup7olearbl0d" path="res://Scenes/Levels/Berry.gd" id="1_jo4hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncnj0"]
 size = Vector2(15.375, 14.5)
 
 [node name="Collectberry" type="Area2D"]
 light_mask = 2
-script = ExtResource("1_ncnj0")
+script = ExtResource("1_jo4hl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-9.53674e-07, -3.8147e-06)
