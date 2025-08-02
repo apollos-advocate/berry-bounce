@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://pgis6tsmoibd"]
+
+[ext_resource type="Script" uid="uid://2icn6crlm14s" path="res://Scenes/pesticide_goon.gd" id="1_qduxm"]
+[ext_resource type="Texture2D" uid="uid://dkly831qr2skd" path="res://Assets/images/favpng_f1cea9a72daa037754beb1d332f687c3__1_-removebg-preview.png" id="2_l5wwg"]
+[ext_resource type="PackedScene" uid="uid://bq5du574re4kw" path="res://Scenes/Levels/Level1.tscn" id="3_fsmdr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upbrr"]
+size = Vector2(86, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnwfu"]
+size = Vector2(92, 46)
+
+[node name="PesticideGoon" type="CharacterBody2D"]
+script = ExtResource("1_qduxm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(94, 192)
+scale = Vector2(0.172164, 0.176029)
+texture = ExtResource("2_l5wwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(101, 196)
+shape = SubResource("RectangleShape2D_upbrr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100, 159)
+shape = SubResource("RectangleShape2D_nnwfu")
+
+[node name="Node" parent="Area2D" instance=ExtResource("3_fsmdr")]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collide_with_areas = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

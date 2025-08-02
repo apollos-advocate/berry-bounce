@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://2wwsy3ncmjcw"]
+[gd_scene load_steps=2 format=3 uid="uid://2wwsy3ncmjcw"]
 
-[node name="Hud" type="Node2D"]
+[ext_resource type="Script" uid="uid://uowygptup1i4" path="res://Scenes/UI/hud.gd" id="1_sprlj"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_sprlj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
