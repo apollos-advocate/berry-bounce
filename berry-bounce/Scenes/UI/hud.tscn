@@ -6,5 +6,15 @@
 script = ExtResource("1_sprlj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 234.0
+offset_bottom = 89.0
+
+[node name="BerryCount" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Berries: 0"
+
+[node name="Health" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Health: 5/5"

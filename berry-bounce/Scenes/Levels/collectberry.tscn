@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxfxq2amsujpl"]
 
 [ext_resource type="Texture2D" uid="uid://dis01lnjahv0g" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/white berry.png" id="1_e0f7l"]
-[ext_resource type="Script" uid="uid://dup7olearbl0d" path="res://Scenes/Levels/Berry.gd" id="1_jo4hl"]
+[ext_resource type="Script" uid="uid://dup7olearbl0d" path="res://Scripts/Berry.gd" id="1_jo4hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncnj0"]
 size = Vector2(15.375, 14.5)

@@ -4,12 +4,14 @@ extends CanvasLayer
 var player
 
 func _ready():
-	player = get_node(player_path)
-	update_berry_count(Global.berry_count)
-	update_health(player.max_health)
+	player = get_node_or_null(player_path)
+	if player:
+		update_berry_count(Global.berry_count)
+		update_health(player.health)
 
 func update_berry_count(amount: int):
-	$BerryCountLabel.text = "Berries: %d" % amount
+	$HBoxContainer/BerryCount.text = "Berries: %d" % amount
 
 func update_health(health: int):
-	$HealthLabel.text = "Health: %d/%d" % [health, player.max_health]
+	if player:
+		$HBoxContainer/Health.text = "Health: %d/%d" % [health, player.max_health]

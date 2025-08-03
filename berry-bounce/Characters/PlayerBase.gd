@@ -16,7 +16,6 @@ var checkpoint_position: Vector2
 func _ready():
 	health = max_health
 	checkpoint_position = global_position
-	update_hat()
 	update_hud()
 
 func _physics_process(delta: float):
@@ -58,7 +57,7 @@ func respawn():
 
 func die():
 	Global.save_game()
-	get_tree().change_scene("res://UI/GameOver.tscn")
+	get_tree().change_scene("res://UI/gameover.tscn")
 
 func take_damage(amount: int):
 	health -= amount
@@ -76,9 +75,3 @@ func update_hud():
 	if has_node("/root/Main/HUD"):
 		get_node("/root/Main/HUD").update_health(health)
 		get_node("/root/Main/HUD").update_berry_count(Global.berry_count)
-
-func update_hat():
-	if Global.current_hat != "":
-		hat_sprite.texture = load("res://Hats/%s.png" % Global.current_hat)
-	else:
-		hat_sprite.texture = null
