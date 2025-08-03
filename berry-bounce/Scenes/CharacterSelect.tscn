@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://djqvjsbkvs6fb"]
+
+[ext_resource type="Script" uid="uid://d112tqt3k37ev" path="res://Scripts/Character_Select.gd" id="1_8da4y"]
+[ext_resource type="Texture2D" uid="uid://qk0a8fok82jf" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/strawberry/red strawberry.png" id="2_j555r"]
+[ext_resource type="Texture2D" uid="uid://d3tor0r1f88hw" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/red raspberry.png" id="3_jbnqh"]
+[ext_resource type="Texture2D" uid="uid://b648prtub1y6p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/blueberry/blueberry.png" id="4_8cwx3"]
+[ext_resource type="Texture2D" uid="uid://f8wfa17yfs2k" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blackberry.png" id="5_ydguf"]
+[ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="6_j555r"]
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8da4y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 658.0
+color = Color(0.914728, 0.712321, 0.766242, 1)
+
+[node name="StrawberryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 207.0
+offset_right = 115.0
+offset_bottom = 292.0
+scale = Vector2(15, 15)
+texture_normal = ExtResource("2_j555r")
+texture_pressed = ExtResource("2_j555r")
+texture_hover = ExtResource("2_j555r")
+texture_disabled = ExtResource("2_j555r")
+texture_focused = ExtResource("2_j555r")
+
+[node name="RaspberryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 208.0
+offset_right = 375.0
+offset_bottom = 253.0
+scale = Vector2(16, 16)
+texture_normal = ExtResource("3_jbnqh")
+texture_pressed = ExtResource("3_jbnqh")
+texture_hover = ExtResource("3_jbnqh")
+texture_disabled = ExtResource("3_jbnqh")
+texture_focused = ExtResource("3_jbnqh")
+
+[node name="BlueberryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 207.0
+offset_right = 736.0
+offset_bottom = 236.0
+scale = Vector2(15, 15)
+texture_normal = ExtResource("4_8cwx3")
+texture_pressed = ExtResource("4_8cwx3")
+texture_hover = ExtResource("4_8cwx3")
+texture_disabled = ExtResource("4_8cwx3")
+texture_focused = ExtResource("4_8cwx3")
+
+[node name="BlackberryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 845.0
+offset_top = 207.0
+offset_right = 859.0
+offset_bottom = 221.0
+scale = Vector2(16, 16)
+texture_normal = ExtResource("5_ydguf")
+texture_pressed = ExtResource("5_ydguf")
+texture_hover = ExtResource("5_ydguf")
+texture_disabled = ExtResource("5_ydguf")
+texture_focused = ExtResource("5_ydguf")
+
+[node name="ConfirmButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 457.0
+offset_right = 792.0
+offset_bottom = 547.0
+theme_override_fonts/font = ExtResource("6_j555r")
+theme_override_font_sizes/font_size = 50
+text = "Confirm"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 64.0
+offset_right = 577.0
+offset_bottom = 112.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j555r")
+theme_override_font_sizes/font_size = 50
+text = "Pick your character!"
+horizontal_alignment = 1

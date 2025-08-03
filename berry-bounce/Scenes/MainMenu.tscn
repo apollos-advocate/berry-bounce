@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmof0djomk2t0"]
+
+[ext_resource type="Script" uid="uid://b2jy5rqdiox35" path="res://Scripts/MainMenu.gd" id="1_8saeu"]
+[ext_resource type="Texture2D" uid="uid://c3qkyggmf38oa" path="res://Assets/images/berry bounce.png" id="1_853f1"]
+[ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="2_8saeu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8saeu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1020.0
+offset_bottom = 400.0
+texture = ExtResource("1_853f1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 318.0
+offset_top = 391.0
+offset_right = 835.0
+offset_bottom = 551.0
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8saeu")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8saeu")
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[node name="ShopButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8saeu")
+theme_override_font_sizes/font_size = 30
+text = "SHOP"
+
+[node name="InfoButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8saeu")
+theme_override_font_sizes/font_size = 30
+text = "INFO"
