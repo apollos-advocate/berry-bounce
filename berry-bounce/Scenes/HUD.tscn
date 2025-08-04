@@ -19,8 +19,8 @@ script = ExtResource("1_hhtw7")
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_left = 104.0
 offset_top = 27.0
-offset_right = 1981.0
-offset_bottom = 140.0
+offset_right = 764.0
+offset_bottom = 64.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
@@ -75,11 +75,11 @@ expand_mode = 2
 [node name="BerryLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("12_7bkcm")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 25
 text = "x 0           "
 
 [node name="HealthLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("12_7bkcm")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 30
 text = "Health: 5/5"

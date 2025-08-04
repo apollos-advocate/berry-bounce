@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgsj43w6r13f1"]
+
+[ext_resource type="Script" uid="uid://ddx8rv233h70h" path="res://Scripts/Berry.gd" id="1_oteir"]
+[ext_resource type="Texture2D" uid="uid://c47giihudnio2" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/banana/yellow bananas.png" id="2_c0ttq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aq0l0"]
+size = Vector2(264, 255.5)
+
+[node name="BerryLevel4" type="Area2D"]
+script = ExtResource("1_oteir")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(165, 133)
+scale = Vector2(11.75, 12)
+texture = ExtResource("2_c0ttq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(161, 139.25)
+shape = SubResource("RectangleShape2D_aq0l0")

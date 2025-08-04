@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://je7v6016x6n7"]
+
+[ext_resource type="Script" uid="uid://ddx8rv233h70h" path="res://Scripts/Berry.gd" id="1_cvxw5"]
+[ext_resource type="Texture2D" uid="uid://f8wfa17yfs2k" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blackberry.png" id="2_jtewj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k3j3y"]
+radius = 177.071
+
+[node name="BerryLevel9" type="Area2D"]
+script = ExtResource("1_cvxw5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(257, 173)
+scale = Vector2(20.5, 18.2857)
+texture = ExtResource("2_jtewj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(254, 179)
+shape = SubResource("CircleShape2D_k3j3y")

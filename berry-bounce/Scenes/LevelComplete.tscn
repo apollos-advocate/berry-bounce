@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct1m6g67eo1j8"]
+
+[ext_resource type="Script" uid="uid://bmgs51cl6u5uo" path="res://Scripts/LevelComplete.gd" id="1_eqxnh"]
+[ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="2_ob4rb"]
+
+[node name="LevelComplete" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_eqxnh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.411765)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.0
+offset_top = -201.0
+offset_right = 464.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ob4rb")
+theme_override_font_sizes/font_size = 150
+text = "Level Complete!"
+horizontal_alignment = 1
+
+[node name="NextLevelButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ob4rb")
+theme_override_font_sizes/font_size = 55
+text = "Next Level"
+
+[node name="ReplayLevelButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ob4rb")
+theme_override_font_sizes/font_size = 55
+text = "Replay Level"
+
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ob4rb")
+theme_override_font_sizes/font_size = 55
+text = "Level Select"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ob4rb")
+theme_override_font_sizes/font_size = 55
+text = "Main Menu"

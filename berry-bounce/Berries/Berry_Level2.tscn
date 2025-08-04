@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8buppia2v26u"]
+
+[ext_resource type="Script" uid="uid://ddx8rv233h70h" path="res://Scripts/Berry.gd" id="1_c2ccl"]
+[ext_resource type="Texture2D" uid="uid://b8miyyi2pwd1p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/red/red strawberry.png" id="2_2acm0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c2ccl"]
+
+[node name="BerryLevel2" type="Area2D"]
+script = ExtResource("1_c2ccl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(454, 302.75)
+scale = Vector2(1.375, 1.15625)
+texture = ExtResource("2_2acm0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(454, 303)
+shape = SubResource("CapsuleShape2D_c2ccl")
