@@ -2,7 +2,6 @@ extends Control
 
 const MAX_LEVELS = 10
 
-# Dictionary mapping level numbers → scene paths
 var level_scenes := {
 	1: "res://Levels/Level1.tscn",
 	2: "res://Levels/Level2.tscn",
@@ -18,6 +17,9 @@ var level_scenes := {
 
 func _ready():
 	setup_level_buttons()
+
+	# Connect the BackButton signal
+	$BackButton.connect("pressed", Callable(self, "_on_back_pressed"))
 
 func setup_level_buttons():
 	for level_num in range(1, MAX_LEVELS + 1):
@@ -38,3 +40,6 @@ func setup_level_buttons():
 func _on_level_button_pressed(level_num: int):
 	Global.current_level = level_num
 	get_tree().change_scene_to_file(level_scenes[level_num])
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

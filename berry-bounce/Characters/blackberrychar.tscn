@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbln0yqx48vjt"]
+[gd_scene load_steps=4 format=3 uid="uid://bbln0yqx48vjt"]
 
 [ext_resource type="Texture2D" uid="uid://f8wfa17yfs2k" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blackberry.png" id="1_5avib"]
+[ext_resource type="Script" uid="uid://bknimaos87wvc" path="res://Scripts/Player.gd" id="1_rilpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rilpp"]
 size = Vector2(298, 311)
 
 [node name="blackberrychar" type="CharacterBody2D"]
+script = ExtResource("1_rilpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(148, 141.75)

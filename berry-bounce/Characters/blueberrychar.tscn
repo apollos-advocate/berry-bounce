@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://blv3vr80ym3jy"]
+[gd_scene load_steps=4 format=3 uid="uid://blv3vr80ym3jy"]
 
+[ext_resource type="Script" uid="uid://bknimaos87wvc" path="res://Scripts/Player.gd" id="1_68drk"]
 [ext_resource type="Texture2D" uid="uid://b648prtub1y6p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/blueberry/blueberry.png" id="1_ofk3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68drk"]
 size = Vector2(274, 276)
 
 [node name="Blueberrychar" type="CharacterBody2D"]
+script = ExtResource("1_68drk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(143, 131)

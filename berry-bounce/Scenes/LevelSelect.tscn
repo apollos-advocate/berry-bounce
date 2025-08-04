@@ -94,3 +94,13 @@ offset_bottom = 111.0
 theme_override_fonts/font = ExtResource("2_fo23m")
 theme_override_font_sizes/font_size = 50
 text = "Level Select"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 568.0
+offset_right = 757.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("2_fo23m")
+theme_override_font_sizes/font_size = 45
+text = "Back to Main Menu"

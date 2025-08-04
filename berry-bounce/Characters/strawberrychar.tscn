@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b311rqw6mdqwi"]
 
-[ext_resource type="Script" uid="uid://d4leu0mmdkg55" path="res://Characters/PlayerBase.gd" id="1_ogqjf"]
+[ext_resource type="Script" uid="uid://bknimaos87wvc" path="res://Scripts/Player.gd" id="1_ogqjf"]
 [ext_resource type="Texture2D" uid="uid://qk0a8fok82jf" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/strawberry/red strawberry.png" id="1_p71dx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogqjf"]

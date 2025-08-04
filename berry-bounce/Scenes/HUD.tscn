@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://c03eifw241w33"]
+
+[ext_resource type="Script" uid="uid://c51iw6lvielpc" path="res://Scripts/HUD.gd" id="1_hhtw7"]
+[ext_resource type="Texture2D" uid="uid://brqfu2fynv41r" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/pink/pink berry.png" id="2_w5mne"]
+[ext_resource type="Texture2D" uid="uid://qk0a8fok82jf" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/strawberry/red strawberry.png" id="3_xuldq"]
+[ext_resource type="Texture2D" uid="uid://cc4epjpfimmol" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/orange/orange 1.png" id="4_g6jqq"]
+[ext_resource type="Texture2D" uid="uid://c47giihudnio2" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/banana/yellow bananas.png" id="5_5ouvn"]
+[ext_resource type="Texture2D" uid="uid://c5knjwjmu4qku" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/pineapple/yellow pineapple.png" id="6_w0blg"]
+[ext_resource type="Texture2D" uid="uid://cumuncf0xmixl" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/apple/green apple.png" id="7_lqayy"]
+[ext_resource type="Texture2D" uid="uid://dsh3nxoobvsxk" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/aqua/aqua dragonfruit.png" id="8_lrioy"]
+[ext_resource type="Texture2D" uid="uid://dca08to5rg7p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/blue/blueberry.png" id="9_8ys6w"]
+[ext_resource type="Texture2D" uid="uid://f8wfa17yfs2k" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blackberry.png" id="10_8kn8h"]
+[ext_resource type="Texture2D" uid="uid://bebbx5k8anfc8" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/grape/purple grapes.png" id="11_ync2q"]
+[ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="12_7bkcm"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_hhtw7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 104.0
+offset_top = 27.0
+offset_right = 1981.0
+offset_bottom = 140.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_w5mne")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_xuldq")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_g6jqq")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_5ouvn")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_w0blg")
+expand_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_lqayy")
+expand_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_lrioy")
+expand_mode = 2
+
+[node name="TextureRect8" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_8ys6w")
+expand_mode = 2
+
+[node name="TextureRect9" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_8kn8h")
+expand_mode = 2
+
+[node name="TextureRect10" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("11_ync2q")
+expand_mode = 2
+
+[node name="BerryLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_7bkcm")
+theme_override_font_sizes/font_size = 90
+text = "x 0           "
+
+[node name="HealthLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_7bkcm")
+theme_override_font_sizes/font_size = 90
+text = "Health: 5/5"
