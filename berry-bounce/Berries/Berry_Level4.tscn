@@ -4,16 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://c47giihudnio2" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/banana/yellow bananas.png" id="2_c0ttq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aq0l0"]
-size = Vector2(264, 255.5)
+size = Vector2(33, 20.75)
 
 [node name="BerryLevel4" type="Area2D"]
 script = ExtResource("1_oteir")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(165, 133)
 scale = Vector2(11.75, 12)
 texture = ExtResource("2_c0ttq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(161, 139.25)
+position = Vector2(84.5, 45.625)
 shape = SubResource("RectangleShape2D_aq0l0")
