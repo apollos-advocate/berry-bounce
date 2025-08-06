@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://cc4epjpfimmol" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/orange/orange 1.png" id="2_ps60n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tip6x"]
-radius = 96.2549
+radius = 13.1529
 
 [node name="BerryLevel3" type="Area2D"]
 script = ExtResource("1_yjvjr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(242, 178)
-scale = Vector2(8.4375, 7.6875)
+position = Vector2(181.75, 124.75)
+scale = Vector2(0.90625, 1.03125)
 texture = ExtResource("2_ps60n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(244, 176)
+position = Vector2(180, 126)
 shape = SubResource("CircleShape2D_tip6x")
