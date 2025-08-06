@@ -16,6 +16,21 @@ var current_level: int = 1
 var unlocked_hats: Array = []
 var current_hat: String = ""
 
+# --- Level Scene Paths ---
+# So menus & "Next Level" always know what to load
+var level_scenes := {
+	1: "res://Levels/Level1.tscn",
+	2: "res://Levels/Level2.tscn",
+	3: "res://Levels/Level3.tscn",
+	4: "res://Levels/Level4.tscn",
+	5: "res://Levels/Level5.tscn",
+	6: "res://Levels/Level6.tscn",
+	7: "res://Levels/Level7.tscn",
+	8: "res://Levels/Level8.tscn",
+	9: "res://Levels/Level9.tscn",
+	10: "res://Levels/Level10.tscn"
+}
+
 func _ready() -> void:
 	# Load saved data here in the future
 	pass
@@ -43,6 +58,11 @@ func unlock_level(level_num: int) -> void:
 		unlocked_levels.sort()  # Keep sorted
 	save_game()
 
+func get_next_level_path() -> String:
+	if current_level + 1 in level_scenes:
+		return level_scenes[current_level + 1]
+	return ""
+
 # -------------------------
 # Hats
 # -------------------------
@@ -60,7 +80,6 @@ func unlock_hat(hat_name: String) -> void:
 # HUD Update Helper
 # -------------------------
 func _update_hud() -> void:
-	# Look for HUD inside the *current* active scene
 	if get_tree().current_scene:
 		var hud = get_tree().current_scene.get_node_or_null("HUD")
 		if hud:
@@ -72,4 +91,3 @@ func _update_hud() -> void:
 # -------------------------
 func save_game() -> void:
 	print("Saving game... (placeholder)")
-	# Later: Write to file here

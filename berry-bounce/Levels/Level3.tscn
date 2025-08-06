@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cmi84t7v0n8r"]
+[gd_scene load_steps=12 format=4 uid="uid://cmi84t7v0n8r"]
 
 [ext_resource type="Script" uid="uid://c1ilnxs04oogy" path="res://Scripts/Level.gd" id="1_8eiv4"]
 [ext_resource type="Texture2D" uid="uid://cxerqhs5vwgkp" path="res://Assets/images/Screenshot 2025-08-02 140842.png" id="2_8eiv4"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bxd86eyoj0bkq" path="res://Scenes/PauseMenu.tscn" id="6_q5lgr"]
 [ext_resource type="PackedScene" uid="uid://c03eifw241w33" path="res://Scenes/HUD.tscn" id="7_hy5j1"]
 [ext_resource type="PackedScene" uid="uid://ct1m6g67eo1j8" path="res://Scenes/LevelComplete.tscn" id="8_xxxi4"]
+[ext_resource type="PackedScene" uid="uid://cc2w1uyldna4f" path="res://Scenes/Goal.tscn" id="9_q5lgr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vybwq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5lgr"]
 texture = ExtResource("2_yd8fq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -112,7 +113,7 @@ texture = ExtResource("2_yd8fq")
 
 [sub_resource type="TileSet" id="TileSet_4cgce"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vybwq")
+sources/0 = SubResource("TileSetAtlasSource_q5lgr")
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_8eiv4")
@@ -171,6 +172,9 @@ position = Vector2(-2288, -361)
 [node name="HUD" parent="." instance=ExtResource("7_hy5j1")]
 
 [node name="LevelComplete" parent="." instance=ExtResource("8_xxxi4")]
+
+[node name="Goal" parent="." instance=ExtResource("9_q5lgr")]
+position = Vector2(2712, -225)
 
 [connection signal="body_entered" from="BerryLevel3" to="BerryLevel3" method="_on_body_entered"]
 [connection signal="body_entered" from="BerryLevel4" to="BerryLevel4" method="_on_body_entered"]
