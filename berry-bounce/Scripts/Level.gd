@@ -30,3 +30,7 @@ func _ready():
 
 func _on_berry_level_1_body_entered(body: Node2D) -> void:
 	pass
+
+
+func _on_berry_level_7_body_entered(body: Node2D) -> void:
+	pass 
