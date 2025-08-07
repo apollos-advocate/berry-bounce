@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://cawhdl3hkf0tj"]
+[gd_scene load_steps=3 format=3 uid="uid://cawhdl3hkf0tj"]
+
+[ext_resource type="Script" uid="uid://c1ilnxs04oogy" path="res://Scripts/Level.gd" id="1_3bas4"]
+[ext_resource type="Texture2D" uid="uid://cgrlsa6p7l1k4" path="res://Assets/images/Screenshot 2025-08-06 204425.png" id="2_m8vve"]
 
 [node name="Level9" type="Node2D"]
+script = ExtResource("1_3bas4")
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(-5319, 835)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_m8vve")

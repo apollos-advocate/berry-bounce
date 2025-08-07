@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://ituc5tsilxyb" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/blueberry/aqua blueberry.png" id="2_sdp2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vw5j"]
-size = Vector2(238, 218.5)
+size = Vector2(24, 25)
 
 [node name="BerryLevel7" type="Area2D"]
 script = ExtResource("1_pdqti")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(150, 123)
-scale = Vector2(10.6875, 10.2333)
+position = Vector2(74.25, 54.1251)
+scale = Vector2(1.21875, 1.04998)
 texture = ExtResource("2_sdp2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(148, 124.75)
+position = Vector2(75, 54.5)
 shape = SubResource("RectangleShape2D_7vw5j")

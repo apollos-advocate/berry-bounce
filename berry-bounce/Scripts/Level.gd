@@ -28,9 +28,18 @@ func _ready():
 	add_child(level_complete_menu)
 	level_complete_menu.visible = false
 
-func _on_berry_level_1_body_entered(body: Node2D) -> void:
-	pass
-
 
 func _on_berry_level_7_body_entered(body: Node2D) -> void:
-	pass 
+	pass # Replace with function body.
+
+
+func _on_berry_level_17_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_berry_level_8_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_berry_level_9_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

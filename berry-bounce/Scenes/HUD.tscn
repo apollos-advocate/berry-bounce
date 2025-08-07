@@ -7,14 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://c47giihudnio2" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/banana/yellow bananas.png" id="5_5ouvn"]
 [ext_resource type="Texture2D" uid="uid://c5knjwjmu4qku" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/pineapple/yellow pineapple.png" id="6_w0blg"]
 [ext_resource type="Texture2D" uid="uid://cumuncf0xmixl" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/apple/green apple.png" id="7_lqayy"]
-[ext_resource type="Texture2D" uid="uid://dsh3nxoobvsxk" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/aqua/aqua dragonfruit.png" id="8_lrioy"]
-[ext_resource type="Texture2D" uid="uid://dca08to5rg7p" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/color/blue/blueberry.png" id="9_8ys6w"]
-[ext_resource type="Texture2D" uid="uid://f8wfa17yfs2k" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blackberry.png" id="10_8kn8h"]
+[ext_resource type="Texture2D" uid="uid://ituc5tsilxyb" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/blueberry/aqua blueberry.png" id="8_hhtw7"]
+[ext_resource type="Texture2D" uid="uid://dgwn8m4gh5abc" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/berry/blue raspberry.png" id="9_w5mne"]
+[ext_resource type="Texture2D" uid="uid://bns6q5gmy6iib" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/kiwi/brown kiwi.png" id="11_xuldq"]
 [ext_resource type="Texture2D" uid="uid://bebbx5k8anfc8" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/grape/purple grapes.png" id="11_ync2q"]
 [ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="12_7bkcm"]
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_hhtw7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_direction = 2
+offset_left = 97.0
+offset_top = 11.0
+offset_right = 780.0
+offset_bottom = 83.0
+color = Color(0.180572, 0.100287, 0.177668, 0.854902)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_left = 104.0
@@ -54,22 +62,22 @@ expand_mode = 2
 
 [node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("8_lrioy")
+texture = ExtResource("8_hhtw7")
 expand_mode = 2
 
 [node name="TextureRect8" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("9_8ys6w")
+texture = ExtResource("9_w5mne")
 expand_mode = 2
 
 [node name="TextureRect9" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("10_8kn8h")
+texture = ExtResource("11_ync2q")
 expand_mode = 2
 
 [node name="TextureRect10" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("11_ync2q")
+texture = ExtResource("11_xuldq")
 expand_mode = 2
 
 [node name="BerryLabel" type="Label" parent="HBoxContainer"]
