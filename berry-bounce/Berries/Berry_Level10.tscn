@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://bns6q5gmy6iib" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/kiwi/brown kiwi.png" id="2_cgmwy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i66sb"]
-radius = 70.0
-height = 174.0
+radius = 17.0
+height = 36.0
 
 [node name="BerryLevel10" type="Area2D"]
 script = ExtResource("1_3hqke")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(164, 140)
-scale = Vector2(6.75, 7.5625)
+position = Vector2(121, 89.75)
+scale = Vector2(1.375, 1.28125)
 texture = ExtResource("2_cgmwy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(164, 134)
+position = Vector2(123, 90)
 shape = SubResource("CapsuleShape2D_i66sb")

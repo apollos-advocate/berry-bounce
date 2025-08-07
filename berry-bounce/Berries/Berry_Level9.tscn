@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bebbx5k8anfc8" path="res://Assets/images/scrimsy fruit icons/scrimsy fruit icons/kind/grape/purple grapes.png" id="2_cvxw5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k3j3y"]
-radius = 177.071
+radius = 28.8617
 
 [node name="BerryLevel9" type="Area2D"]
 script = ExtResource("1_cvxw5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(257, 173)
-scale = Vector2(20.5, 18.2857)
+position = Vector2(159.125, 46.3572)
+scale = Vector2(2.70455, 2.45535)
 texture = ExtResource("2_cvxw5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(254, 179)
+position = Vector2(161, 47)
 shape = SubResource("CircleShape2D_k3j3y")
