@@ -20,6 +20,9 @@ func _ready():
 	current_health = max_health
 	checkpoint_position = global_position
 
+	if HatManager.equipped_hat != "":
+		HatManager.apply_effect(HatManager.equipped_hat)
+
 	update_hat()
 	apply_effect()
 

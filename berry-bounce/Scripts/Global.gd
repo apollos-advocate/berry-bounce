@@ -1,5 +1,7 @@
 extends Node
 
+const SAVE_PATH := "user://save_file.json"
+
 # --- Character Selection ---
 var chosen_character_scene_path: String = ""
 
@@ -32,8 +34,7 @@ var level_scenes := {
 }
 
 func _ready() -> void:
-	# Load saved data here in the future
-	pass
+	load_game()
 
 # -------------------------
 # Character
@@ -87,7 +88,46 @@ func _update_hud() -> void:
 			hud.update_health(current_health, max_health)
 
 # -------------------------
-# Save / Load (placeholder)
+# Save / Load
 # -------------------------
 func save_game() -> void:
-	print("Saving game... (placeholder)")
+	var save_data = {
+		"berry_count": berry_count,
+		"max_health": max_health,
+		"current_health": current_health,
+		"unlocked_levels": unlocked_levels,
+		"current_level": current_level,
+		"unlocked_hats": unlocked_hats,
+		"current_hat": current_hat,
+		"chosen_character_scene_path": chosen_character_scene_path
+	}
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	file.store_string(JSON.stringify(save_data))
+	file.close()
+
+func load_game() -> void:
+	if not FileAccess.file_exists(SAVE_PATH):
+		print("No save file found. Starting new game.")
+		return
+
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var content: String = file.get_as_text()
+	file.close()
+
+	var parse_result = JSON.parse_string(content)
+	if parse_result.error != OK:
+		print("Error parsing save file:", parse_result.error_string)
+		return
+
+	if parse_result.result is Dictionary:
+		var data := parse_result.result as Dictionary
+		berry_count = data.get("berry_count", 0)
+		max_health = data.get("max_health", 5)
+		current_health = data.get("current_health", max_health)
+		unlocked_levels = data.get("unlocked_levels", [1])
+		current_level = data.get("current_level", 1)
+		unlocked_hats = data.get("unlocked_hats", [])
+		current_hat = data.get("current_hat", "")
+		chosen_character_scene_path = data.get("chosen_character_scene_path", "")
+	else:
+		print("Save file content is not a valid dictionary")

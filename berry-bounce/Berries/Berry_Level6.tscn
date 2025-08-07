@@ -14,6 +14,6 @@ position = Vector2(65.25, 34)
 scale = Vector2(1.09375, 1.25)
 texture = ExtResource("2_pwl3c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["berries"]]
 position = Vector2(65.625, 30.75)
 shape = SubResource("RectangleShape2D_h3353")

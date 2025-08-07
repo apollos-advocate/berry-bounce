@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_tip6x"]
 radius = 13.1529
 
-[node name="BerryLevel3" type="Area2D"]
+[node name="BerryLevel3" type="Area2D" groups=["berries"]]
 script = ExtResource("1_yjvjr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

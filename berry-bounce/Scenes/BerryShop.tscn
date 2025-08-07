@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c48ytcgohj33u"]
+[gd_scene load_steps=10 format=3 uid="uid://c48ytcgohj33u"]
 
 [ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="1_iidyl"]
+[ext_resource type="Script" uid="uid://d2uhd5ag81ty7" path="res://Scripts/BerryShop.gd" id="1_poi3f"]
+[ext_resource type="Texture2D" uid="uid://dlail8c1oydyb" path="res://Assets/Hats/hat15.png" id="3_q5q6b"]
+[ext_resource type="Texture2D" uid="uid://ceutl50btkk72" path="res://Assets/Hats/hat1.png" id="4_wskrb"]
+[ext_resource type="Texture2D" uid="uid://bvxyio6mvoxq0" path="res://Assets/Hats/hat3.png" id="5_v0fut"]
+[ext_resource type="Texture2D" uid="uid://5n2i2wm2jl1x" path="res://Assets/Hats/hat17.png" id="6_8v2um"]
+[ext_resource type="Texture2D" uid="uid://ceuwqai3vg5un" path="res://Assets/Hats/hat19.png" id="7_ow25w"]
+[ext_resource type="Texture2D" uid="uid://cprbkvnl70pfm" path="res://Assets/Hats/hat21.png" id="8_2mf1j"]
+[ext_resource type="Texture2D" uid="uid://du6oqib8jwjkb" path="res://Assets/images/Large Size/hat22.png" id="9_bwr1e"]
 
 [node name="BerryShop" type="Control"]
 layout_mode = 3
@@ -9,14 +17,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_poi3f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 649.0
+color = Color(1, 0.358703, 0.783532, 1)
 
 [node name="MainContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1240.0
+offset_bottom = 713.0
 
 [node name="ShopVBox" type="VBoxContainer" parent="MainContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="BerryLabel" type="Label" parent="MainContainer/ShopVBox"]
 layout_mode = 2
@@ -33,5 +49,147 @@ text = "Available Items"
 [node name="CoolHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainContainer/ShopVBox/CoolHatBox"]
+[node name="CoolHatLabel" type="Label" parent="MainContainer/ShopVBox/CoolHatBox"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Cool Hat - 8 berries"
+
+[node name="BuyCoolHatButton" type="Button" parent="MainContainer/ShopVBox/CoolHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/CoolHatBox"]
+layout_mode = 2
+texture = ExtResource("3_q5q6b")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TVHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="TVHatLabel" type="Label" parent="MainContainer/ShopVBox/TVHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "TV Hat - 6 berries"
+
+[node name="BuyTVHatButton" type="Button" parent="MainContainer/ShopVBox/TVHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/TVHatBox"]
+layout_mode = 2
+texture = ExtResource("4_wskrb")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SantaHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="SantaHatLabel" type="Label" parent="MainContainer/ShopVBox/SantaHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Santa Hat - 10 berries"
+
+[node name="BuySantaHatButton" type="Button" parent="MainContainer/ShopVBox/SantaHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/SantaHatBox"]
+layout_mode = 2
+texture = ExtResource("5_v0fut")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="LeprechaunHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="LeprechaunHatLabel" type="Label" parent="MainContainer/ShopVBox/LeprechaunHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Leprechaun Hat - 8 berries"
+
+[node name="BuyLeprechaunHatButton" type="Button" parent="MainContainer/ShopVBox/LeprechaunHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/LeprechaunHatBox"]
+layout_mode = 2
+texture = ExtResource("6_8v2um")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TopHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="TopHatLabel" type="Label" parent="MainContainer/ShopVBox/TopHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Top Hat - 15 berries"
+
+[node name="BuyTopHatButton" type="Button" parent="MainContainer/ShopVBox/TopHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/TopHatBox"]
+layout_mode = 2
+texture = ExtResource("7_ow25w")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BrownHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="BrownHatLabel" type="Label" parent="MainContainer/ShopVBox/BrownHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Brown Fedora - 4 berries"
+
+[node name="BuyBrownHatButton" type="Button" parent="MainContainer/ShopVBox/BrownHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/BrownHatBox"]
+layout_mode = 2
+texture = ExtResource("8_2mf1j")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BlackHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="BlackHatLabel" type="Label" parent="MainContainer/ShopVBox/BlackHatBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Black Star Fedora - 25 berries"
+
+[node name="BuyBlackHatButton" type="Button" parent="MainContainer/ShopVBox/BlackHatBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 34
+text = "Buy"
+
+[node name="HatIcon" type="TextureRect" parent="MainContainer/ShopVBox/BlackHatBox"]
+layout_mode = 2
+texture = ExtResource("9_bwr1e")
+expand_mode = 2
+stretch_mode = 5

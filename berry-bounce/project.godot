@@ -24,6 +24,10 @@ HatManager="*res://Scripts/HatManager.gd"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+berries=""
+
 [input]
 
 right={

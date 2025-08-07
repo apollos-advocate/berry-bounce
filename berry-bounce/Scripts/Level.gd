@@ -29,17 +29,17 @@ func _ready():
 	level_complete_menu.visible = false
 
 
-func _on_berry_level_7_body_entered(body: Node2D) -> void:
+func _on_berry_level_7_body_entered(_body: Node2D) -> void:
 	pass # Replace with function body.
 
 
-func _on_berry_level_17_body_entered(body: Node2D) -> void:
+func _on_berry_level_17_body_entered(_body: Node2D) -> void:
 	pass # Replace with function body.
 
 
-func _on_berry_level_8_body_entered(body: Node2D) -> void:
+func _on_berry_level_8_body_entered(_body: Node2D) -> void:
 	pass # Replace with function body.
 
 
-func _on_berry_level_9_body_entered(body: Node2D) -> void:
+func _on_berry_level_9_body_entered(_body: Node2D) -> void:
 	pass # Replace with function body.
