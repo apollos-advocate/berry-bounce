@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c48ytcgohj33u"]
+[gd_scene load_steps=2 format=3 uid="uid://c48ytcgohj33u"]
+
+[ext_resource type="FontFile" uid="uid://ic6ld6015c20" path="res://Assets/images/rainyhearts.ttf" id="1_iidyl"]
 
 [node name="BerryShop" type="Control"]
 layout_mode = 3
@@ -7,3 +9,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MainContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ShopVBox" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="BerryLabel" type="Label" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 40
+text = "Berries: 0"
+
+[node name="ItemsLabel" type="Label" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_iidyl")
+theme_override_font_sizes/font_size = 50
+text = "Available Items"
+
+[node name="CoolHatBox" type="HBoxContainer" parent="MainContainer/ShopVBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainContainer/ShopVBox/CoolHatBox"]
+layout_mode = 2

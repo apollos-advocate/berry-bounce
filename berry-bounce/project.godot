@@ -18,6 +18,7 @@ config/icon="res://Assets/images/icon.svg"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+HatManager="*res://Scripts/HatManager.gd"
 
 [editor_plugins]
 

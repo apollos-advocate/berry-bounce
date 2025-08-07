@@ -5,6 +5,10 @@ extends CharacterBody2D
 @export var jump_force: float = -600.0
 @export var gravity: float = 2000.0
 
+# --- Hat effects ---
+@onready var hat_sprite = $HatSprite
+var current_effect: Node = null
+
 # --- Health settings ---
 @export var max_health: int = 5
 var current_health: int
@@ -15,6 +19,9 @@ var checkpoint_position: Vector2
 func _ready():
 	current_health = max_health
 	checkpoint_position = global_position
+
+	update_hat()
+	apply_effect()
 
 	# Make sure player is in Player group
 	if not is_in_group("Player"):
@@ -45,6 +52,34 @@ func _physics_process(delta: float):
 	if global_position.y > 2000:
 		_respawn()
 
+# --- Hat + Effect handlers ---
+func update_hat():
+	var hat_name = Global.current_hat
+	if hat_name == "":
+		hat_sprite.texture = null
+	else:
+		var texture = HatManager.get_hat_texture(hat_name)
+		hat_sprite.texture = texture
+
+func apply_effect():
+	if current_effect:
+		current_effect.queue_free()
+	current_effect = null
+
+	match Global.current_effect:
+		"Speed Boost":
+			current_effect = preload("res://Scripts/SpeedEffect.gd").new()
+		"Double Jump":
+			current_effect = preload("res://Scripts/JumpEffect.gd").new()
+		"Glide":
+			current_effect = preload("res://Scripts/GlideEffect.gd").new()
+		"Berry Magnet":
+			current_effect = preload("res://Scripts/BerryMagnetEffect.gd").new()
+
+	if current_effect:
+		add_child(current_effect)
+		current_effect.owner = self
+
 # --- Health & Damage ---
 func take_damage(amount: int):
 	current_health -= amount
@@ -58,7 +93,6 @@ func heal(amount: int):
 
 # --- HUD Updates ---
 func _update_hud():
-	# Let Global handle finding and updating the HUD
 	Global.current_health = current_health
 	Global._update_hud()
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7n1qapaq76u8"
-path="res://.godot/imported/hat13.png-2927931172e64d84fefb10624c2a6a47.ctex"
+uid="uid://bagx0d1xiac6p"
+path="res://.godot/imported/hat6.png-d76a7dbd9553c78597e0e0ca4ba56eca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/Small Size/hat13.png"
-dest_files=["res://.godot/imported/hat13.png-2927931172e64d84fefb10624c2a6a47.ctex"]
+source_file="res://Assets/Hats/hat6.png"
+dest_files=["res://.godot/imported/hat6.png-d76a7dbd9553c78597e0e0ca4ba56eca.ctex"]
 
 [params]
 
