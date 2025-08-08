@@ -45,12 +45,6 @@ theme_override_fonts/font = ExtResource("2_8saeu")
 theme_override_font_sizes/font_size = 30
 text = "PLAY"
 
-[node name="ShopButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_8saeu")
-theme_override_font_sizes/font_size = 30
-text = "SHOP"
-
 [node name="InfoButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8saeu")

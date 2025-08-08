@@ -2,7 +2,6 @@ extends Control
 
 func _ready():
 	$VBoxContainer/PlayButton.connect("pressed", Callable(self, "_on_play_pressed"))
-	$VBoxContainer/ShopButton.connect("pressed", Callable(self, "_on_shop_pressed"))
 	$VBoxContainer/InfoButton.connect("pressed", Callable(self, "_on_info_pressed"))
 	$VBoxContainer/QuitButton.connect("pressed", Callable(self, "_on_quit_pressed"))
 

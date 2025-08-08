@@ -1,117 +1,74 @@
 extends CharacterBody2D
 
-# --- Movement settings ---
+# --- Movement Settings ---
 @export var move_speed: float = 350.0
 @export var jump_force: float = -600.0
 @export var gravity: float = 2000.0
 
-# --- Hat effects ---
-@onready var hat_sprite = $HatSprite
-var current_effect: Node = null
-
-# --- Health settings ---
+# --- Health ---
 @export var max_health: int = 5
 var current_health: int
 
-# --- Respawn / checkpoint ---
+# --- Checkpoint ---
 var checkpoint_position: Vector2
 
-func _ready():
+func _ready() -> void:
 	current_health = max_health
 	checkpoint_position = global_position
 
-	if HatManager.equipped_hat != "":
-		HatManager.apply_effect(HatManager.equipped_hat)
-
-	update_hat()
-	apply_effect()
-
-	# Make sure player is in Player group
 	if not is_in_group("Player"):
 		add_to_group("Player")
 
 	_update_hud()
 
-func _physics_process(delta: float):
-	# Apply gravity
+func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_force
 
-	# Left/right movement
 	var direction = Input.get_axis("left", "right")
 	if direction != 0:
 		velocity.x = direction * move_speed
 		$Sprite2D.flip_h = direction < 0
 	else:
-		velocity.x = move_toward(velocity.x, 0, move_speed)
+		velocity.x = move_toward(velocity.x, 0, move_speed * delta)
 
 	move_and_slide()
 
-	# Fall detection
 	if global_position.y > 2000:
 		_respawn()
 
-# --- Hat + Effect handlers ---
-func update_hat():
-	var hat_name = Global.current_hat
-	if hat_name == "":
-		hat_sprite.texture = null
-	else:
-		var texture = HatManager.get_hat_texture(hat_name)
-		hat_sprite.texture = texture
-
-func apply_effect():
-	if current_effect:
-		current_effect.queue_free()
-	current_effect = null
-
-	match Global.current_effect:
-		"Speed Boost":
-			current_effect = preload("res://Scripts/SpeedEffect.gd").new()
-		"Double Jump":
-			current_effect = preload("res://Scripts/JumpEffect.gd").new()
-		"Glide":
-			current_effect = preload("res://Scripts/GlideEffect.gd").new()
-		"Berry Magnet":
-			current_effect = preload("res://Scripts/BerryMagnetEffect.gd").new()
-
-	if current_effect:
-		add_child(current_effect)
-		current_effect.owner = self
-
-# --- Health & Damage ---
-func take_damage(amount: int):
+# --- Health ---
+func take_damage(amount: int) -> void:
 	current_health -= amount
 	_update_hud()
 	if current_health <= 0:
 		_die()
 
-func heal(amount: int):
+func heal(amount: int) -> void:
 	current_health = min(current_health + amount, max_health)
 	_update_hud()
 
-# --- HUD Updates ---
-func _update_hud():
+# --- HUD ---
+func _update_hud() -> void:
 	Global.current_health = current_health
 	Global._update_hud()
 
 # --- Respawn / Death ---
-func _respawn():
+func _respawn() -> void:
 	global_position = checkpoint_position
 	current_health -= 1
 	_update_hud()
 	if current_health <= 0:
 		_die()
 
-func _die():
+func _die() -> void:
 	var game_over_menu = get_tree().current_scene.find_child("GameOverMenu", true, false)
 	if game_over_menu:
 		game_over_menu.show_game_over()
 
 # --- Checkpoints ---
-func set_checkpoint(pos: Vector2):
+func set_checkpoint(pos: Vector2) -> void:
 	checkpoint_position = pos

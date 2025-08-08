@@ -123,6 +123,8 @@ position = Vector2(-428, 172)
 [node name="Goal" parent="." instance=ExtResource("9_vd23k")]
 position = Vector2(2630, 384)
 
+[node name="HatSprite" type="Sprite2D" parent="."]
+
 [connection signal="body_entered" from="BerryLevel2" to="BerryLevel2" method="_on_body_entered"]
 [connection signal="body_entered" from="BerryLevel3" to="BerryLevel3" method="_on_body_entered"]
 [connection signal="body_entered" from="BerryLevel4" to="BerryLevel4" method="_on_body_entered"]

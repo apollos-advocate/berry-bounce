@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8hr78eduqtnv"]
+
+[ext_resource type="AudioStream" uid="uid://csdwqw52juvxw" path="res://Assets/images/Ketsa - Will Make You Happy.mp3" id="1_5psdy"]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_5psdy")
+autoplay = true
+parameters/looping = true

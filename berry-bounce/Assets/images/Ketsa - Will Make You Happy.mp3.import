@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csdwqw52juvxw"
+path="res://.godot/imported/Ketsa - Will Make You Happy.mp3-1b4f7480221ab77c96b12b4bf1d04431.mp3str"
+
+[deps]
+
+source_file="res://Assets/images/Ketsa - Will Make You Happy.mp3"
+dest_files=["res://.godot/imported/Ketsa - Will Make You Happy.mp3-1b4f7480221ab77c96b12b4bf1d04431.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
